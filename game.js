@@ -4,7 +4,7 @@ let target = {
   name: "Otis",
   grumbles: 0,
   img: "grump.jpg",
-  item: {}
+  item: { name: "nothing" }
 }
 
 let items = {
@@ -27,7 +27,6 @@ function walk(itemName) {
 }
 
 function pet(itemName) {
-
   if (itemName === "Hat") {
     target.grumpiness -= 4;
   }
@@ -36,7 +35,7 @@ function pet(itemName) {
   }
 
   target.grumbles++;
-  target.img = "pet.jpg";
+  target.img = "pet.JPG";
   update();
 }
 
@@ -76,7 +75,7 @@ function update() {
           <button class="btn btn-primary m-1" onclick="giveItem('bone')">bone</button></div></div>`
 
   let happyTemplate = `      <div class="row game-row">
-      <div class="col "><img class="img-fluid" src="happy.jpg" alt="Otis!" /></div>
+      <div class="col "><img class="img" src="happy.jpg" alt="Otis!" height="300" /></div>
       <div class="col"><h1>Happy Dog!</h1>
       </div>`
   if (target.grumpiness > 0) {
