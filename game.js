@@ -56,8 +56,8 @@ function update() {
 
 
   let template = `
-      <div class="row game-row">
-      <div class="col "><img class="img" src="${target.img}" alt="Otis!" height="300"/></div>
+      <div class="row game-row text-center">
+      <div class="col "><img src="${target.img}" alt="Otis!" max-height="300" max-width="300"/></div>
       <div class="col">
         <p>Name:${target.name}</p>
         <p>Grumpiness:${target.grumpiness}</p>
