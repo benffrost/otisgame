@@ -58,7 +58,7 @@ function update() {
   let template = `
     <div class="row game-row text-center">
       <div class="col ">
-        <img src="${target.img}" alt="Otis!" height="300" width="300"/>
+        <img src="${target.img}" alt="Otis!" height="300"/>
       </div>
     
       <div class="col">
