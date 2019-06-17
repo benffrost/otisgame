@@ -22,7 +22,7 @@ function walk(itemName) {
   }
 
   target.grumbles++;
-  target.img = "walk.jpg";
+  target.img = "walk.JPG";
   update();
 }
 
