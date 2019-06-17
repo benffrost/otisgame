@@ -56,28 +56,36 @@ function update() {
 
 
   let template = `
-      <div class="row game-row text-center">
-      <div class="col "><img src="${target.img}" alt="Otis!" max-height="300" max-width="300"/></div>
+    <div class="row game-row text-center">
+      <div class="col ">
+        <img src="${target.img}" alt="Otis!" height="300" width="300"/>
+      </div>
+    
       <div class="col">
         <p>Name:${target.name}</p>
         <p>Grumpiness:${target.grumpiness}</p>
         <p>Grumbles:${target.grumbles}</p></div>
-        
       </div>
       
       <div class="row text-center"><div class="col">
         <button class="btn btn-primary m-1" onClick="pet('${target.item.name}')">Notice</button>
         <button class="btn btn-primary m-1" onClick="walk('${target.item.name}')">Walk</button>
-        <button class="btn btn-primary m-1" onClick="play('${target.item.name}')">Play</button></div>
-        <div class="col" id="items">
-          <button class="btn btn-primary m-1" onclick="giveItem('hat')">hat</button>
-          <button class="btn btn-primary m-1" onclick="giveItem('toy')">toy</button>
-          <button class="btn btn-primary m-1" onclick="giveItem('bone')">bone</button></div></div>`
+        <button class="btn btn-primary m-1" onClick="play('${target.item.name}')">Play</button>
+      </div>
 
-  let happyTemplate = `      <div class="row game-row">
+      <div class="col" id="items">
+        <button class="btn btn-primary m-1" onclick="giveItem('hat')">hat</button>
+        <button class="btn btn-primary m-1" onclick="giveItem('toy')">toy</button>
+        <button class="btn btn-primary m-1" onclick="giveItem('bone')">bone</button>
+      </div>
+    </div>`
+
+  let happyTemplate = `
+    <div class="row game-row">
       <div class="col "><img class="img" src="happy.jpg" alt="Otis!" height="300" /></div>
       <div class="col"><h1>Happy Dog!</h1>
-      </div>`
+    </div>`
+
   if (target.grumpiness > 0) {
     document.querySelector("#main").innerHTML = template;
   } else {
